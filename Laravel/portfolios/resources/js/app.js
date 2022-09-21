@@ -1,7 +1,8 @@
 import './bootstrap';
+import { createApp } from 'vue';
+import TestVue from './components/users/TestVue.vue';
+import ProfileVue from './components/users/ProfileVue.vue';
 
-import Alpine from 'alpinejs';
-
-window.Alpine = Alpine;
-
-Alpine.start();
+const app = createApp({})
+app.component('profile-vue', ProfileVue);
+app.mount('#app')
